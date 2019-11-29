@@ -4,9 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "bundle": "webpack",
-    "start": "webpack-dev-server",
-    "server": "node server.js"
+    "start": "webpack-dev-server"
   },
   "author": "rantuki",
   "license": "ISC",
