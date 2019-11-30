@@ -13,6 +13,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+      {
       test: /\.(jpg|png|gif)$/,
       use: {
         loader: 'url-loader',
@@ -46,6 +51,9 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({
     template: 'src/index.html'
   }), new CleanWebpackPlugin()],
+  optimization: {
+    usedExports: true
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
